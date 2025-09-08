@@ -3,9 +3,8 @@
   margin-top: 80px;
   --s: 12px; /* control the size */
   --c: #111;
- 
-  width: 750px;
-  height: 425px;
+  height: 70vh;
+  width: 100vw;
   aspect-ratio: 1.25;
   background: 
     conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
@@ -13,6 +12,7 @@
   border: var(--s) solid var(--c);
   padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
   box-sizing: content-box;
+  display: flex;
   align-items: center;
   justify-content: center; 
   position: fixed;
@@ -21,163 +21,219 @@
 
 .robot-container-foreground {
   margin-top: 7px;
-  height: 400px;
-  width: 740px;
+  margin-left: 0px;
+  height: 70%;
+  width: 100%;
   background-image: url(https://fastly.picsum.photos/id/56/2880/1920.jpg?hmac=BIplhYgNZ9bsjPXYhD0xx6M1yPgmg4HtthKkCeJp6Fk);
   background-repeat: repeat;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   position: fixed;
   z-index: 1; 
 }
 
-.robot-face-shape-one {
+.robot-face-shape {
   /*sphere*/
-  width: 420px;
+  width: 250px;
   aspect-ratio: 1;
   border-radius: 50%;
   border-style: solid;
   border-color: black;
   background: radial-gradient(circle at 40% 30%,#0000 4%,57%, #fba563 90%)  #facfa7;
   position: fixed;
-  top: 155px;
-  left: 175px;
+  top: 240px;
+  left: 200px;
   z-index: 3;
 }
 
-.robot-face-shape-two {
-  /*sphere*/
-  width: 360px;
-  height: 180px;
+.robot-face-cheeks {
+  width: 230px;
+  height: 100px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 30%,#0000 4%,57%, #fba563 90%)  #facfa7;
   position: fixed;
-  top: 400px;
-  left: 150px;
+  top: 410px;
+  left: 195px;
   z-index: 5;
   rotate: 8deg;
 }
 
 .robot-eye-left {
-  width: 75px;
-  height: 130px;
+  width: 45px;
+  height: 85px;
   border-radius: 50%;
   background: white;
   border-width: 1px;
   border-style: solid;
   border-color: black;
   position: fixed;  
-  top: 300px;
-  left: 200px;
+  top: 335px;
+  left: 230px;
   z-index: 4;
-  rotate: 3deg;
+  rotate: 1deg;
+}
+
+.robot-eye-left-iris {
+  width: 30px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(30, 23, 15);
+  position: fixed;
+  top: 25px;
+  left: 12px;
+  z-index: 5;
 }
 
 .robot-eye-left-pupil {
-  width: 55px;
-  height: 85px;
-  border-radius: 50%;
-  background: black;
-  position: fixed;
-  top: 28px;
-  left: 20px;
-  z-index: 6;
-}
-
-.robot-eye-left-pupil-highlight {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: white;
-  position: fixed;
-  top: 40px;
-  left: 28px;
-  z-index: 7;
-} 
-
-.robot-eye-right {
-  width: 90px;
-  height: 140px;
-  border-radius: 50%;
-  background: white;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-  position: fixed;  
-  top: 295px;
-  left: 365px;
-  z-index: 4;
-  rotate: 3deg;
-}
-
-.robot-eye-right-pupil {
-  width: 65px;
-  height: 95px;
+  width: 1em;
+  height: 2em;
   border-radius: 50%;
   background: black;
   position: fixed;
   top: 35px;
-  left: 19px;
+  left: 22px;
   z-index: 6;
 }
 
-.robot-eye-right-pupil-highlight {
+.robot-eye-left-pupil-highlight-one {
+  width: 20%;
+  height: 15%;
+  border-radius: 50%;
+  background: white;
+  position: fixed;
+  top: 55px;
+  left: 20px;
+  z-index: 7;
+} 
+
+.robot-eye-left-pupil-highlight-two {
+  /*circle*/
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  position: fixed;
+  top: 37px;
+  left: 25px;
+  z-index: 7;
+} 
+
+.robot-eye-right {
+  width: 55px;
+  height: 95px;
+  border-radius: 50%;
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  position: fixed;  
+  top: 332px;
+  left: 328px;
+  z-index: 4;
+  rotate: 5deg;
+}
+
+.robot-eye-right-iris {
+  width: 35px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(30, 23, 15);
+  position: fixed;
+  top: 27px;
+  left: 17px;
+  z-index: 5;
+}
+
+.robot-eye-right-pupil {
+  width: 1.5em;
+  height: 2.5em;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: black;
+  position: fixed;
+  top: 30px;
+  left: 11px;
+  z-index: 6;
+}
+
+.robot-eye-right-pupil-highlight-one {
+  /*circle*/
+  width: 22%;
+  height: 18%;
+  border-radius: 50%;
+  background: white;
+  position: fixed;
+  top: 63px;
+  left: 25px;
+  z-index: 7;
+} 
+
+.robot-eye-right-pupil-highlight-two {
+  /*circle*/
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: white;
   position: fixed;
-  top: 50px;
+  top: 40px;
   left: 30px;
   z-index: 7;
 } 
 
 .robot-brow-left {
   --c: 50.5; /* control the curvature (a percentage value without unit bigger than 50%)*/
-  width: 60px;
+  width: 50px;
   aspect-ratio: 18/2;
   background: black;
   mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
   clip-path: ellipse(calc(var(--c)*1%) 100% at bottom);  position: fixed;
   position: fixed;
-  top: 270px;
-  left: 200px;
+  top: 320px;
+  left: 210px;
   z-index: 8;  
   rotate: -30deg;
 
 }
+
 .robot-brow-right {
   --c: 50.5; /* control the curvature (a percentage value without unit bigger than 50%)*/ 
-  width: 90px;
+  width: 70px;
   aspect-ratio: 16/2;
   background: black;
   mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
   clip-path: ellipse(calc(var(--c)*1%) 100% at bottom);  position: fixed;
   position: fixed;
-  top: 275px;
-  left: 390px;
+  top: 320px;
+  left: 340px;
   z-index: 8;  
   rotate: 30deg;
 }
 
 .robot-nose-bridge {
-  width: 30px;
-  height: 55px;
+  /*rectangle*/
+  width: 1%;
+  height: 3%;
   background-image: linear-gradient(to right, #f9d8ad 5%, #facfa7 30%, #fba563);
   position: fixed;
-  top: 370px;
-  left: 305px;
+  top: 390px;
+  left: 290px;
   z-index: 8;
   rotate: 3deg;
+  opacity: 50%;
 }
 
 .robot-nose {
-  width: 70px;
-  height: 30px;  
+  width: 2em;
+  height: .7em;  
   border-radius: 50%;
   background-image: linear-gradient(to right, #fee2bd 5%, #f7b97f 70%, #fba563);
   position: fixed;
-  top: 415px;
-  left: 273px;
+  top: 416px;
+  left: 271px;
   border-width: 1px;
   border-style: solid;
   border-color: linear-gradient(to right, black, #f7b97f 70%, #fba563);
@@ -186,105 +242,123 @@
 }
 
 .robot-mouth {
-  height: 55px;
-  aspect-ratio: 3/1.75;
+  height: 35px;
+  aspect-ratio: 3/2.3;
     /* update the 85% to control the curvature
       you can also update the 50% to control the position
     */
   clip-path: ellipse(75% 100% at 30% 0%);
   background: black;
   position: fixed;
-  top: 480px;
-  left: 305px;
-  rotate: 10deg;
+  top: 450px;
+  left: 300px;
   z-index: 8;
 }
 
 .robot-teeth {
-  height: 20px;
-  width: 150px;
-  aspect-ratio: 3/2;
-    /* update the 85% to control the curvature
-      you can also update the 50% to control the position
-    */
-  clip-path: ellipse(85% 100% at 50% 0%);
+  rotate: -2deg;
+  z-index: 11;
+}
+
+.robot-tooth-one {
+  /*square*/
+  width: 9px;
+  height: 9px;
   background: white;
   position: fixed;
-  top: -2px;
-  left: 0px;
-  rotate: -2deg;
+  opacity: 75%;
+  top: 1px;
+}
+
+.robot-tooth-two {
+  /*square*/
+  width: 12px;
+  height: 12px;
+  background: white;
+  position: fixed;
+  top: 1px;
+  left: 6px;
+}
+
+.robot-tooth-three {
+  /*square*/
+  width: 14px;
+  height: 14px;
   border-width: 1px;
   border-style: solid;
-  border-color: linear-gradient(to right, black, #f7b97f 70%, #fba563);
-  z-index: 10;
-}
-
-.robot-tongue {
-  height: 40px;
-  aspect-ratio: 3/2;
-  clip-path: ellipse(85% 100% at 50% 0%);
-  background: #CC2A41;
+  border-color: black;
+  background: white;
   position: fixed;
-  top: 25px;
-  left: 35px;
-  rotate: 160deg;
-  z-index: 9;
+  left: 18px;
 }
 
+.robot-tooth-four {
+  /*square*/
+  width: 10px;
+  height: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+  position: fixed;
+  left: 32px;
+}
 /*layer robot-ear-left behind head*/
 .robot-ear-left {
-  width: 60px;
-  height: 60px;
-  background: #fbc491;
+  width: 40px;
+  height: 40px;
+  background: #fba563;
   border-radius: 50%;
   position: fixed;
-  top:403px;
-  left: 155px;
+  top: 410px;
+  left: 200px;
   z-index: 2;
 }
 
 .robot-ear-right {
-  width: 75px;
-  height: 105px;
+  width: 50px;
+  height: 80px;
   background: #fcb177;
   border-radius: 50%;
   position: fixed;
   top: 415px;
-  left: 515px;
-  rotate: 25deg;
+  left: 415px;
+  rotate: 35deg;
   z-index: 15;
 }
 
 .robot-ear-right-detail {
-  width: 50px;
-  height: 50px;
+  /*circle*/
+  width: 30px;
+  height: 30px;
   background: #fba563;
   border-radius: 50%;
   position: fixed;
-  top: 33px;
+  top: 32px;
   left: 10px;
   z-index: 16;
 }
 
-.robot-hair-zero {
-  height: 300px;
-  width: 350px;
+.robot-hair-back {
+  height: 200px;
+  width: 250px;
   border-radius: 50%;
   background: black;
   position: fixed;
-  top: 120px;
-  left: 245px;
+  top: 200px;
+  left: 232px;
+  rotate: 10deg;
   z-index: 2;
 }
 
-.robot-hair-one {
+.robot-hair-main {
   --r: 20px;  /* control the rounded part */
-  --s: 175px;  /* control the size of the cut */
-  --a: 8deg; /* control the depth of the curvature */
+  --s: 130px;  /* control the size of the cut */
+  --a: 6deg; /* control the depth of the curvature */
   --p: 55%;   /* control the position */
 
-  height: 250px;
-  aspect-ratio: 6/3.4;
+  height: 187px;
+  aspect-ratio: 6/4.5;
   background: black;
   border-radius: var(--r);
   --_m:var(--r),#000 calc(100% - 1px),#0000;
@@ -295,48 +369,48 @@
     radial-gradient(var(--s) at var(--p) calc(-1*sin(var(--a))*var(--s)),
       #0000 100%,#000 calc(100% + 1px)) 0 calc(var(--r)*(1 - sin(var(--a)))) no-repeat,
     linear-gradient(90deg,#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0);
-  rotate: -150deg;
-  top: 150px;
-  left: 200px;
+  rotate: -165deg;
+  top: 230px;
+  left: 212px;
   position: fixed;
   z-index: 13;
   }
 
-.robot-hair-two {
+.robot-hair-left {
   width: 0;
   height: 0;
-  border-left: 130px solid transparent;
-  border-right: 130px solid transparent;
-  border-top: 210px solid black;
+  border-left: 60px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 100px solid black;
   position: fixed;
-  top:200px;
-  left: 480px;
-  rotate: 8deg;
-  z-index: 14;
+  top: 130px;
+  left: 240px;
+  rotate: 10deg;
+  z-index: 3;
 }
 
-.robot-hair-three {
+.robot-hair-right {
   width: 0;
   height: 0;
-  border-left: 80px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 160px solid black;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  border-top: 150px solid black;
   position: fixed;
-  top: -25px;
-  left: 250px;
-  rotate: -15deg;
-  z-index: 14;
+  top:320px;
+  left: 220px;
+  rotate: -2deg;
+  z-index: 3;
 }
 
-.robot-hair-four {
+.robot-hair-front {
   width: 0;
   height: 0;
-  border-left: 90px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 120px solid black;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 70px solid black;
   position: fixed;
-  top:160px;
-  left:230px;
-  rotate: 7deg;
+  top:247px;
+  left:237px;
+  rotate:7deg;
   z-index: 14;
 }
